@@ -149,14 +149,14 @@ def event_handle(event):
 
     if msgType == "text":
         msg = str(event["message"]["text"])
-        if msg == "สวัสดี" :
-            replyObj = TextSendMessage(text="จร้า...สวัสดี")
+        if msg == "สวัสดีค่ะ" :
+            replyObj = TextSendMessage(text="สวัสดียามเช้าค่ะ ยินดีต้อนรับ เมาท์ข่าวด่วนจึ๋งค่ะ")
             line_bot_api.reply_message(rtoken, replyObj)
-        elif msg == "กินข้าวไหม" :
-            replyObj = TextSendMessage(text="โอเคร")
+        elif msg == "สนใจอ่านข่าวค่ะ" :
+            replyObj = TextSendMessage(text="อยากได้ข่าวแบบใหนค่ะ")
             line_bot_api.reply_message(rtoken, replyObj)
-       elif msg == "ไปเรียนไหม" : 
-            replyObj = TextSendMessage(text="ไปดิ")
+       elif msg == "ข่าวที่มาแรงในตอนนี้" : 
+            replyObj = TextSendMessage(text="https://www.sanook.com/news/8526842/")
             line_bot_api.reply_message(rtoken, replyObj)
        else :   
           headers = request.headers
